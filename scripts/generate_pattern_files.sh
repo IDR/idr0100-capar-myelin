@@ -6,7 +6,7 @@ ln -s /uod/idr/filesets/idr0100-capar-myelin/20201022-ftp/experimentA/Sample_Mye
 ln -s /uod/idr/filesets/idr0100-capar-myelin/20201022-ftp/experimentA/Sample_Myelin_Images1/Sample1_Oligodendrocyte.tif /uod/idr/metadata/idr0100-capar-myelin/pattern/Sample1_C3.tif
 echo "Sample1_C<1-4>.tif" > "/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample1.pattern"
 
-ln -s /uod/idr/filesets/idr0100-capar-myelin/20201022-ftp/experimentA/Sample_Myelin_Images12/Sample2_Axon.tif /uod/idr/metadata/idr0100-capar-myelin/pattern/Sample2_C1.tif
+ln -s /uod/idr/filesets/idr0100-capar-myelin/20201022-ftp/experimentA/Sample_Myelin_Images2/Sample2_Axon.tif /uod/idr/metadata/idr0100-capar-myelin/pattern/Sample2_C1.tif
 ln -s /uod/idr/filesets/idr0100-capar-myelin/20201022-ftp/experimentA/Sample_Myelin_Images2/Sample2_Ground_Truth.tif /uod/idr/metadata/idr0100-capar-myelin/pattern/Sample2_C4.tif
 ln -s /uod/idr/filesets/idr0100-capar-myelin/20201022-ftp/experimentA/Sample_Myelin_Images2/Sample2_Nucleus.tif /uod/idr/metadata/idr0100-capar-myelin/pattern/Sample2_C2.tif
 ln -s /uod/idr/filesets/idr0100-capar-myelin/20201022-ftp/experimentA/Sample_Myelin_Images2/Sample2_Oligodendrocyte.tif /uod/idr/metadata/idr0100-capar-myelin/pattern/Sample2_C3.tif
