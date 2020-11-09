@@ -1,5 +1,5 @@
-Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample1.pattern
-Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample2.pattern
-Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample3.pattern
-Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample4.pattern
-Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample5.pattern
+Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample1.pattern	Sample1
+Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample2.pattern	Sample2
+Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample3.pattern	Sample3
+Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample4.pattern	Sample4
+Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample5.pattern	Sample5
