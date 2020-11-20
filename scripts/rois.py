@@ -17,9 +17,8 @@ from omero.rtypes import (
 )
 
 PROJECT = "idr0100-capar-myelin/experimentA"
-RGBA = (255, 255, 255, 128)
-DRYRUN = True
-
+RGBA = (255, 255, 0, 128)
+DRYRUN = False
 
 def mask_from_binary_image(
       binim, rgba=None, z=None, c=None, t=None, text=None,
@@ -89,7 +88,7 @@ def mask_from_binary_image(
 
 def masks_from_label_image(
       labelim, rgba=None, z=None, c=None, t=None, text=None,
-      raise_on_no_mask=True):
+      raise_on_no_mask=False):
     """
     Create mask shapes from a label image (background=0)
 
@@ -109,40 +108,6 @@ def masks_from_label_image(
         mask = mask_from_binary_image(labelim == i, rgba, z, c, t, text,
                                       raise_on_no_mask)
         masks.append(mask)
-    return masks
-
-
-def masks_from_3d_label_image(
-      planes, rgba=None, z=None, c=None, z_stack=True, t=None, text=None):
-    """
-    Create mask shapes from a 3d label image, either z stack or timepoints,
-    grouped by label ID (background=0)
-
-    :param list of numpy.array planes: list of 2D label arrays in z order
-    :param rgba int-4-tuple: Optional (red, green, blue, alpha) colour
-    :param z: Optional Z-index for the mask
-    :param c: Optional C-index for the mask
-    :param t: Optional T-index for the mask
-    :param z_stack: Flag if the planes represent a z stack, timepoints
-                    otherwise (default: True)
-    :param text: Optional text for the mask
-    :return: A dictionary of OMERO masks with the labels as keys
-           ({} if no labels found)
-
-    """
-    masks = {}
-    for i, plane in enumerate(planes):
-        if z_stack:
-            plane_masks = masks_from_label_image(plane, rgba, i, c, t,
-                                                 text, False)
-        else:
-            plane_masks = masks_from_label_image(plane, rgba, z, c, i,
-                                                 text, False)
-        for label, mask in enumerate(plane_masks):
-            if label not in masks:
-                masks[label] = []
-            if mask.getBytes().any():
-                masks[label].append(mask)
     return masks
 
 
@@ -190,16 +155,18 @@ def create_rois(seg_img):
         zct_list.append((z, 0, 0))
     print("Going through {} planes".format(len(zct_list)))
     planes = seg_img.getPrimaryPixels().getPlanes(zct_list)
-    masks = masks_from_3d_label_image(planes, rgba=RGBA, z=None,
-                                      c=None, z_stack=True, t=None,
-                                      text=None)
 
     rois = []
-    for label,mask in masks.items():
-        roi = omero.model.RoiI()
-        for m in mask:
-            roi.addShape(m)
-        rois.append(roi)
+    for i, plane in enumerate(planes):
+        plane_masks = masks_from_label_image(plane, rgba=RGBA, z=i, c=None,
+                                             t=None, text=None,
+                                             raise_on_no_mask=False)
+        for label, mask in enumerate(plane_masks):
+            if mask.getBytes().any():
+                roi = omero.model.RoiI()
+                roi.addShape(mask)
+                rois.append(roi)
+
     print("{} rois created.".format(len(rois)))
     return rois
 
