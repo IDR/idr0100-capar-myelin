@@ -2,7 +2,6 @@
 path: "idr0100-experimentA-filePaths.tsv"
 continue: true
 transfer: "ln_s"
-exclude: "clientpath"
 skip:
   - "all"
 parallel_upload: "4"

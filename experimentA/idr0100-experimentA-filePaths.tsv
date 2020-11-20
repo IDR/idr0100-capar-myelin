@@ -1,5 +1,10 @@
 Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample1.pattern	Sample1
+Dataset:name:Samples	/uod/idr/filesets/idr0100-capar-myelin/20201022-ftp/experimentA/Sample_Myelin_Images1/Sample1_Ground_Truth.tif	Sample1_Ground_Truth
 Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample2.pattern	Sample2
+Dataset:name:Samples	/uod/idr/filesets/idr0100-capar-myelin/20201022-ftp/experimentA/Sample_Myelin_Images2/Sample2_Ground_Truth.tif	Sample2_Ground_Truth
 Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample3.pattern	Sample3
+Dataset:name:Samples	/uod/idr/filesets/idr0100-capar-myelin/20201022-ftp/experimentA/Sample_Myelin_Images3/Sample3_Ground_Truth.tif	Sample3_Ground_Truth
 Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample4.pattern	Sample4
+Dataset:name:Samples	/uod/idr/filesets/idr0100-capar-myelin/20201022-ftp/experimentA/Sample_Myelin_Images4/Sample4_Ground_Truth.tif	Sample4_Ground_Truth
 Dataset:name:Samples	/uod/idr/metadata/idr0100-capar-myelin/pattern/Sample5.pattern	Sample5
+Dataset:name:Samples	/uod/idr/filesets/idr0100-capar-myelin/20201022-ftp/experimentA/Sample_Myelin_Images5/Sample5_Ground_Truth.tif	Sample5_Ground_Truth
