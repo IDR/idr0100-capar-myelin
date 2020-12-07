@@ -115,13 +115,13 @@ def get_images(conn):
     project = conn.getObject('Project', attributes={'name': PROJECT})
     for dataset in project.listChildren():
         for image in dataset.listChildren():
-            if len(image.name) > 8:
+            if len(image.name) > 15:
                 continue
             yield image
 
 
 def get_segmented_image(conn, image):
-    name = image.name+"_Ground_Truth"
+    name = image.name+" Ground Truth"
     try:
         result = conn.getObject('Image', attributes={'name': name})
         return result

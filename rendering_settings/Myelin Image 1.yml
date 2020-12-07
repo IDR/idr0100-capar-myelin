@@ -2,15 +2,15 @@
 channels:
     1:
         active: true
-        color: FF0000
-        end: 80.0
+        color: 00FF00
+        end: 50.0
         label: 'Axon'
         max: 255.0
         min: 0.0
         start: 0.0
     2:
         active: true
-        color: 00FF00
+        color: 0000FF
         end: 50.0
         label: 'Nucleus'
         max: 158.0
@@ -18,8 +18,8 @@ channels:
         start: 0.0
     3:
         active: true
-        color: 0000FF
-        end: 80.0
+        color: FF0000
+        end: 50.0
         label: 'Oligodendrocyte'
         max: 255.0
         min: 0.0

@@ -3,9 +3,10 @@ path: "idr0100-experimentA-filePaths.tsv"
 continue: true
 transfer: "ln_s"
 skip:
-  - "all"
-parallel_upload: "4"
-parallel_fileset: "4"
+  - "checksum"
+  - "thumbnails"
+parallel_upload: "5"
+parallel_fileset: "5"
 columns:
   - target
   - path
