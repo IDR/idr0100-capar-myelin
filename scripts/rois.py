@@ -161,7 +161,7 @@ def create_rois(seg_img):
         plane_masks = masks_from_label_image(plane, rgba=RGBA, z=i, c=None,
                                              t=None, text=None,
                                              raise_on_no_mask=False)
-        for label, mask in enumerate(plane_masks):
+        for mask in plane_masks:
             if mask.getBytes().any():
                 roi = omero.model.RoiI()
                 roi.addShape(mask)
