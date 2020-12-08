@@ -83,26 +83,50 @@ columns:
           include: true
 
   - group:
+      namespace: openmicroscopy.org/mapr/antibody
+      columns:
+        - name: Experimental Condition [Primary Antibody 2]
+          clientname: Antibody
+          include: true
+          omitempty: false
+        - name: Primary Antibody Identifier 2
+          clientname: Antibody Identifier
+          include: true
+          omitempty: false
+
+  - group:
       namespace: openmicroscopy.org/mapr/antibody/supplementary
       columns:
-        - name: Primary Antibody Identifier 2
-          clientname: Primary Antibody 2
+        - name: Experimental Condition [Primary Antibody 1]
+          clientname: Primary Antibody 1
           include: true
           omitempty: false
         - name: Primary Antibody Dilution 1
           clientname: Primary Antibody 1 Dilution
           include: true
           omitempty: false
+        - name: Experimental Condition [Primary Antibody 2]
+          clientname: Primary Antibody 2
+          include: true
+          omitempty: false
         - name: Primary Antibody Dilution 2
           clientname: Primary Antibody 2 Dilution
           include: true
           omitempty: false
-        - name: Experimental Condition [Secondary Antibodies]
-          clientname: Secondary Antibodies
+        - name: Experimental Condition [Secondary Antibody 1]
+          clientname: Secondary Antibody 1
           include: true
           omitempty: false
-        - name: Secondary Antibody Dilution
-          clientname: Secondary Antibody Dilution
+        - name: Secondary Antibody 1 Dilution
+          clientname: Secondary Antibody 1 Dilution
+          include: true
+          omitempty: false
+        - name: Experimental Condition [Secondary Antibody 2]
+          clientname: Secondary Antibody 2
+          include: true
+          omitempty: false
+        - name: Secondary Antibody 2 Dilution
+          clientname: Secondary Antibody 2 Dilution
           include: true
           omitempty: false
 
