@@ -97,8 +97,8 @@ columns:
           clientname: Primary Antibody 2 Dilution
           include: true
           omitempty: false
-        - name: Experimental Condition [Secondary Antibody]
-          clientname: Secondary Antibody
+        - name: Experimental Condition [Secondary Antibodies]
+          clientname: Secondary Antibodies
           include: true
           omitempty: false
         - name: Secondary Antibody Dilution
