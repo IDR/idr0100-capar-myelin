@@ -1,0 +1,124 @@
+---
+name: idr0100-capar-myelin/experimentA
+version: 1
+
+defaults:
+  include: no
+  type: string
+  includeclient: yes
+  visible: yes
+  omitempty: yes
+
+columns:
+
+  - name: Comment [Cell Line]
+    clientname: Comment Cell Line
+    include: yes
+
+  - name: Channels
+    clientname: Channels
+    include: yes
+
+
+  ######################################################################
+  # mapr groups
+  ######################################################################
+
+  - group:
+      namespace: openmicroscopy.org/mapr/organism
+      columns:
+        - name: Characteristics [Organism]
+          clientname: Organism
+          include: yes
+
+  - group:
+      namespace: openmicroscopy.org/mapr/cell_line
+      columns:
+        - name: Characteristics [Cell Line]
+          clientname: Cell Line
+          include: true
+
+  - group:
+      namespace: openmicroscopy.org/mapr/gene
+      columns:
+        - name: Comment [Gene Identifier 1]
+          clientname: Gene Identifier
+          include: yes
+        - name: Comment [Gene Identifier 1]
+          clientname: Gene Identifier URL
+          clientvalue: http://www.ensembl.org/id/{{ value|urlencode }}
+          include: yes
+        - name: Comment [Gene Symbol 1]
+          clientname: Gene Symbol
+          include: yes
+
+  - group:
+      namespace: openmicroscopy.org/mapr/gene
+      columns:
+        - name: Comment [Gene Identifier 2]
+          clientname: Gene Identifier
+          include: yes
+        - name: Comment [Gene Identifier 2]
+          clientname: Gene Identifier URL
+          clientvalue: http://www.ensembl.org/id/{{ value|urlencode }}
+          include: yes
+        - name: Comment [Gene Symbol 2]
+          clientname: Gene Symbol
+          include: yes
+
+  - group:
+      namespace: openmicroscopy.org/mapr/antibody
+      columns:
+        - name: Experimental Condition [Primary Antibody 1]
+          clientname: Antibody
+          include: true
+          omitempty: false
+        - name: Primary Antibody Identifier 1
+          clientname: Antibody Identifier
+          include: true
+          omitempty: false
+        - name: Primary Antibody Identifier 1
+          clientname: Antibody Identifier URL
+          clientvalue: http://antibodyregistry.org/{{ value|urlencode }}
+          include: true
+
+  - group:
+      namespace: openmicroscopy.org/mapr/antibody/supplementary
+      columns:
+        - name: Primary Antibody Identifier 2
+          clientname: Primary Antibody 2
+          include: true
+          omitempty: false
+        - name: Primary Antibody Dilution 1
+          clientname: Primary Antibody 1 Dilution
+          include: true
+          omitempty: false
+        - name: Primary Antibody Dilution 2
+          clientname: Primary Antibody 2 Dilution
+          include: true
+          omitempty: false
+        - name: Experimental Condition [Secondary Antibody]
+          clientname: Secondary Antibody
+          include: true
+          omitempty: false
+        - name: Secondary Antibody Dilution
+          clientname: Secondary Antibody Dilution
+          include: true
+          omitempty: false
+
+advanced:
+  ignore_missing_primary_key: yes
+  primary_group_keys:
+    - namespace: openmicroscopy.org/mapr/organism
+      keys:
+        - Organism
+    - namespace: openmicroscopy.org/mapr/cell_line
+      keys:
+        - Cell Line
+    - namespace: openmicroscopy.org/mapr/gene
+      keys:
+        - Gene Identifier
+        - Gene Symbol
+    - namespace: openmicroscopy.org/mapr/antibody
+      keys:
+        - Antibody Identifier
