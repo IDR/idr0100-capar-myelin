@@ -4,7 +4,6 @@ continue: true
 transfer: "ln_s"
 skip:
   - "checksum"
-  - "thumbnails"
 parallel_upload: "5"
 parallel_fileset: "5"
 columns:
