@@ -11,15 +11,6 @@ defaults:
 
 columns:
 
-  - name: Comment [Cell Line]
-    clientname: Comment Cell Line
-    include: yes
-
-  - name: Channels
-    clientname: Channels
-    include: yes
-
-
   ######################################################################
   # mapr groups
   ######################################################################
@@ -37,6 +28,13 @@ columns:
         - name: Characteristics [Cell Line]
           clientname: Cell Line
           include: true
+
+  - group:
+      namespace: openmicroscopy.org/mapr/cell_line/supplementary
+      columns:
+      - name: Comment [Cell Line]
+        clientname: Comment Cell Line
+        include: yes
 
   - group:
       namespace: openmicroscopy.org/mapr/gene
