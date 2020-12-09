@@ -50,7 +50,7 @@ Term Source URI	http://purl.obolibrary.org/obo/	http://www.ebi.ac.uk/efo/	http:/
 Experiment Number	1										
 Comment[IDR Experiment Name]	idr0100-capar-myelin/experimentA	
 
-Experiment Sample Type cell									
+Experiment Sample Type	cell									
 Experiment Description	Immunolabeling of mouse embryonic stem cell derived neurons (TUJ1) and oligodendrocytes (MBP) and their nuclei (DAPI). Cells were grown in microfluidic chambers. Myelin is annotated on images.
 
 Experiment Size	5D Images: 24 (5 sets x 4 images each)	Average Image Dimension (XYZCT): 8000 x 2000 x 40 x 1 x 1	Total Tb: 																			
