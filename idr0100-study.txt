@@ -1,0 +1,99 @@
+# FILL IN AS MUCH INFORMATION AS YOU CAN.  HINTS HAVE BEEN PUT IN SOME FIELDS AFTER THE HASH # SYMBOL. REPLACE THE HINT WITH TEXT WHERE APPROPRIATE.															
+# STUDY DESCRIPTION SECTION											
+# Section with generic information about the study including title, description, publication details (if applicable) and contact details																											
+Comment[IDR Study Accession]	idr0100											
+Study Title	A Multi-Spectral Myelin Annotation Tool for Machine Learning Based Myelin Quantification
+
+Study Type	myelination
+
+Study Type Term Source REF	GO										
+Study Type Term Accession	GO_0042552										
+Study Description	Myelin is an essential component of the nervous system and myelin damage causes demyelination diseases. Myelin is a sheet of oligodendrocyte membrane wrapped around the neuronal axon. In the fluorescent images, experts manually identify myelin by co-localization of oligodendrocyte and axonal membranes that fit certain shape and size criteria. Because myelin wriggles along x-y-z axes, machine learning is ideal for its segmentation. However, machine-learning methods, especially convolutional neural networks (CNNs), require a high number of annotated images, which necessitate expert labor. To facilitate myelin annotation, we developed a workflow and a software for myelin ground truth extraction from multi-spectral fluorescent images. Additionally, we shared a set of myelin ground truths annotated using this workflow.						
+Study Key Words	myelin annotation tool	myelin quantification	fluorescence images	machine learning	image analysis																	
+Study Organism	Mus musculus											
+Study Organism Term Source REF	NCBITaxon										
+Study Organism Term Accession	10090										
+Study Experiments Number	1
+
+Study External URL	
+
+Study BioImage Archive Accession
+										
+Study Public Release Date	2020-12-10																																							
+# Study Publication											
+Study PubMed ID																					
+Study Publication Title	A Multi-Spectral Myelin Annotation Tool for Machine Learning Based Myelin Quantification										
+Study Author List	Capar A, Cimen Yetis S, Aladag Z, Ekinci DA, Ayten UE, Toreyin BU, Kerman BE
+										
+Study PMC ID											
+Study DOI	
+																																	
+# Study Contacts																																	
+Study Person Last Name	Kerman	Toreyin																														
+Study Person First Name	Bilal	Behcet																														
+Study Person Email	bkerman@gmail.com	toreyin@itu.edu.tr																																
+Study Person Address	Istanbul Medipol University, Kavacık Mah. Ekinciler Cd. No:19 Beykoz, Istanbul, Turkey	Istanbul Technical University,  Informatics Institute, Istanbul, 34469, Turkey
+Study Person ORCID	0000-0003-1106-3288	0000-0003-4406-2783																															
+Study Person Roles	principal investigator	principal investigator
+																																	
+# Study License and Data DOI																						
+Study License	CC BY 4.0																					
+Study License URL	https://creativecommons.org/licenses/by/4.0/																					
+Study Copyright	Capar et al																														
+Study Data Publisher	University of Dundee																					
+Study Data DOI																																																					
+Term Source Name	NCBITaxon	EFO	CMPO	FBbi																													
+Term Source URI	http://purl.obolibrary.org/obo/	http://www.ebi.ac.uk/efo/	http://www.ebi.ac.uk/cmpo/	http://purl.obolibrary.org/obo/																													
+																						
+# EXPERIMENT SECTION											
+# Experiment Section containing all information relative to each experiment in the study including materials used, protocols names and description, phenotype names and description. For multiple experiments this section should be repeated.  Copy and paste the whole section below and fill out for the next experiment																										
+Experiment Number	1										
+Comment[IDR Experiment Name]	idr0100-capar-myelin/experimentA	
+
+Experiment Sample Type cell									
+Experiment Description	Immunolabeling of mouse embryonic stem cell derived neurons (TUJ1) and oligodendrocytes (MBP) and their nuclei (DAPI). Cells were grown in microfluidic chambers. Myelin is annotated on images.
+
+Experiment Size	5D Images: 24 (5 sets x 4 images each)	Average Image Dimension (XYZCT): 8000 x 2000 x 40 x 1 x 1	Total Tb: 																			
+Experiment Example Images																						
+Experiment Imaging Method	confocal microscopy																															
+Experiment Imaging Method Term Source REF	Fbbi																																
+Experiment Imaging Method Term Accession	FBbi_00000251																																	
+Experiment Comments	Ground Truth images contain myelin as identified and curated by three experts. They were extracted to use in machine learning.  
+																																	
+# assay files																																	
+Experiment Assay File																																	
+Experiment Assay File Format	tab-delimited text																																
+Assay Experimental Conditions	Targeted cellular component	antibody staining	colocalization
+
+
+Assay Experimental Conditions Term Source REF																																	
+Assay Experimental Conditions Term Accession																																	
+Quality Control Description																																	
+																																	
+# Protocols																																	
+Protocol Name	growth protocol	treatment protocol	image acquisition and feature extraction protocol	data analysis protocol																													
+Protocol Type	growth protocol	treatment protocol	image acquisition and feature extraction protocol	data analysis protocol																													
+Protocol Type Term Source REF	EFO	EFO																															
+Protocol Type Term Accession	EFO_0003789	EFO_0003969																															
+Protocol Description	Cell differentiation and growth protocols can be accessed at Kerman et al. 2015 Development 142(12):2213-25. DOI: 10.1242/dev.116517		Cells were grown in microfluidic chambers. 	Myelinating co-cultures of oligodendrocytes and neurons were fixed in 4% paraformaldehyde. Cells were incubated overnight with anti-TUJ1 and anti-MBP primary antibodies. DAPI (Sigma) was used to visualize nuclei.	Myelin was annotated using 3D Myelin Marking (CEM3D) software by 3 experts.																													
+																																	
+# Phenotypes																																	
+Phenotype Name	myelin
+Phenotype Description	myelin was identified by experts
+Phenotype Score Type	manual																													
+Phenotype Term Source REF	CMPO																																
+Phenotype Term Name																																	
+Phenotype Term Accession																												
+																																	
+																																	
+# Feature Level Data Files (give individual file details unless there is one file per well)																																	
+Feature Level Data File Name																																	
+Feature Level Data File Format																																	
+Feature Level Data File Description																																	
+Feature Level Data Column Name																																	
+Feature Level Data Column Description																																	
+																																	
+#  Processed Data Files 																																	
+Processed Data File Name	Sample1_Ground_Truth.tif	Sample2_Ground_Truth.tif	Sample3_Ground_Truth.tif	Sample4_Ground_Truth.tif	Sample5_Ground_Truth.tif																										
+Processed Data File Format	tab-delimited text																																
+Processed Data File Description	These image files contain annotated and curated myelin ground truths										
