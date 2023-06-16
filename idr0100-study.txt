@@ -17,7 +17,7 @@ Study Experiments Number	1
 
 Study External URL	
 
-Study BioImage Archive Accession
+Study BioImage Archive Accession	S-BIAD493
 										
 Study Public Release Date	2020-12-10																																							
 # Study Publication											
